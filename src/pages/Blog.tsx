@@ -4,6 +4,21 @@ import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock } from "lucide-react";
 import { blogPosts } from "@/data/blogPosts";
 
+// Import all blog images
+import reactTypeScriptImg from "@/assets/blog/react-typescript.jpg";
+import cssGridImg from "@/assets/blog/css-grid.jpg";
+import javascriptEs6Img from "@/assets/blog/javascript-es6.jpg";
+import nodejsApiImg from "@/assets/blog/nodejs-api.jpg";
+import pythonWebImg from "@/assets/blog/python-web.jpg";
+
+const blogImages: Record<string, string> = {
+  "react-typescript": reactTypeScriptImg,
+  "css-grid": cssGridImg,
+  "javascript-es6": javascriptEs6Img,
+  "nodejs-api": nodejsApiImg,
+  "python-web": pythonWebImg,
+};
+
 const Blog = () => {
   return (
     <div className="min-h-screen pt-20">
@@ -21,7 +36,15 @@ const Blog = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post) => (
               <Link key={post.id} to={`/blog/${post.id}`}>
-                <Card className="h-full bg-card border-border hover:border-primary transition-all hover:glow-effect cursor-pointer group">
+                <Card className="h-full bg-card border-border hover:border-primary transition-all hover:glow-effect cursor-pointer group overflow-hidden">
+                  <div className="relative h-48 overflow-hidden">
+                    <img
+                      src={blogImages[post.image]}
+                      alt={post.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+                  </div>
                   <CardHeader>
                     <div className="flex items-center gap-2 mb-2">
                       <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">

@@ -2,48 +2,56 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
 
+// Import project images
+import ecommerceImg from "@/assets/projects/ecommerce.jpg";
+import taskAppImg from "@/assets/projects/task-app.jpg";
+import weatherImg from "@/assets/projects/weather.jpg";
+import blogPlatformImg from "@/assets/projects/blog-platform.jpg";
+import socialDashboardImg from "@/assets/projects/social-dashboard.jpg";
+import portfolioGenImg from "@/assets/projects/portfolio-gen.jpg";
+
 const projects = [
   {
     id: 1,
     title: "E-Commerce Platform",
     description: "A full-featured online store with cart, checkout, and payment integration.",
     tech: ["React", "Node.js", "MongoDB", "Stripe"],
-    image: "bg-gradient-to-br from-primary to-accent"
+    image: ecommerceImg
   },
   {
     id: 2,
     title: "Task Management App",
     description: "Collaborative task tracker with real-time updates and team features.",
     tech: ["Vue.js", "Firebase", "Tailwind CSS"],
-    image: "bg-gradient-to-br from-blue-500 to-purple-600"
+    image: taskAppImg
   },
   {
     id: 3,
     title: "Weather Dashboard",
     description: "Real-time weather data visualization with forecasts and alerts.",
     tech: ["React", "TypeScript", "Chart.js", "API"],
-    image: "bg-gradient-to-br from-cyan-500 to-blue-600"
+    image: weatherImg
   },
   {
     id: 4,
     title: "Blog Platform",
     description: "Modern blogging platform with markdown support and SEO optimization.",
     tech: ["Next.js", "Prisma", "PostgreSQL"],
-    image: "bg-gradient-to-br from-green-500 to-emerald-600"
+    image: blogPlatformImg
   },
   {
     id: 5,
     title: "Social Media Dashboard",
     description: "Analytics dashboard for tracking social media metrics across platforms.",
     tech: ["React", "Python", "FastAPI", "D3.js"],
-    image: "bg-gradient-to-br from-pink-500 to-rose-600"
+    image: socialDashboardImg
   },
   {
     id: 6,
     title: "Portfolio Generator",
     description: "Automated portfolio website generator with customizable themes.",
     tech: ["React", "TypeScript", "Tailwind CSS"],
-    image: "bg-gradient-to-br from-orange-500 to-red-600"
+    image: portfolioGenImg
   },
 ];
 
@@ -64,7 +72,14 @@ const Projects = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project) => (
               <Card key={project.id} className="bg-card border-border hover:border-primary transition-all hover:glow-effect group overflow-hidden">
-                <div className={`h-48 ${project.image} opacity-50 group-hover:opacity-70 transition-opacity`} />
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent" />
+                </div>
                 
                 <CardHeader>
                   <CardTitle className="group-hover:text-primary transition-colors">

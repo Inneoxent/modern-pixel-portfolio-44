@@ -4,6 +4,21 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Calendar, Clock } from "lucide-react";
 import { blogPosts } from "@/data/blogPosts";
 
+// Import all blog images
+import reactTypeScriptImg from "@/assets/blog/react-typescript.jpg";
+import cssGridImg from "@/assets/blog/css-grid.jpg";
+import javascriptEs6Img from "@/assets/blog/javascript-es6.jpg";
+import nodejsApiImg from "@/assets/blog/nodejs-api.jpg";
+import pythonWebImg from "@/assets/blog/python-web.jpg";
+
+const blogImages: Record<string, string> = {
+  "react-typescript": reactTypeScriptImg,
+  "css-grid": cssGridImg,
+  "javascript-es6": javascriptEs6Img,
+  "nodejs-api": nodejsApiImg,
+  "python-web": pythonWebImg,
+};
+
 const BlogPost = () => {
   const { id } = useParams();
   const post = blogPosts.find((p) => p.id === Number(id));
@@ -49,6 +64,14 @@ const BlogPost = () => {
                   <span>{post.readTime}</span>
                 </div>
               </div>
+            </div>
+
+            <div className="relative h-96 rounded-xl overflow-hidden border border-border">
+              <img
+                src={blogImages[post.image]}
+                alt={post.title}
+                className="w-full h-full object-cover"
+              />
             </div>
 
             <div className="h-px bg-border" />

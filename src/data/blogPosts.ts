@@ -6,6 +6,7 @@ export interface BlogPost {
   date: string;
   category: string;
   readTime: string;
+  image: string;
 }
 
 export const blogPosts: BlogPost[] = [
@@ -16,7 +17,8 @@ export const blogPosts: BlogPost[] = [
     content: "React and TypeScript together provide an excellent development experience. TypeScript adds static typing to your React components, catching errors early and improving code quality. In this post, we'll explore how to set up a new project, configure TypeScript, and write type-safe components.",
     date: "2024-01-15",
     category: "React",
-    readTime: "5 min read"
+    readTime: "5 min read",
+    image: "react-typescript"
   },
   {
     id: 2,
@@ -25,7 +27,8 @@ export const blogPosts: BlogPost[] = [
     content: "CSS Grid is a powerful layout system that makes creating complex responsive layouts easier than ever. We'll cover grid containers, grid items, template areas, and advanced techniques for building modern web layouts.",
     date: "2024-01-20",
     category: "CSS",
-    readTime: "7 min read"
+    readTime: "7 min read",
+    image: "css-grid"
   },
   {
     id: 3,
@@ -34,7 +37,8 @@ export const blogPosts: BlogPost[] = [
     content: "ES6 and beyond introduced many powerful features to JavaScript. From arrow functions and destructuring to async/await and modules, these features make JavaScript more expressive and easier to work with.",
     date: "2024-02-01",
     category: "JavaScript",
-    readTime: "8 min read"
+    readTime: "8 min read",
+    image: "javascript-es6"
   },
   {
     id: 4,
@@ -43,7 +47,8 @@ export const blogPosts: BlogPost[] = [
     content: "Node.js is perfect for building fast, scalable REST APIs. We'll explore Express.js, middleware, routing, authentication, and best practices for API development.",
     date: "2024-02-10",
     category: "Node.js",
-    readTime: "10 min read"
+    readTime: "10 min read",
+    image: "nodejs-api"
   },
   {
     id: 5,
@@ -52,7 +57,8 @@ export const blogPosts: BlogPost[] = [
     content: "Python offers excellent frameworks like Django and Flask for web development. We'll look at Python's strengths in web development, from rapid prototyping to production-ready applications.",
     date: "2024-02-15",
     category: "Python",
-    readTime: "6 min read"
+    readTime: "6 min read",
+    image: "python-web"
   },
   {
     id: 6,
@@ -61,7 +67,8 @@ export const blogPosts: BlogPost[] = [
     content: "React Hooks revolutionized how we write React components. Learn about useState, useEffect, useContext, and custom hooks to write cleaner, more maintainable code.",
     date: "2024-02-20",
     category: "React",
-    readTime: "9 min read"
+    readTime: "9 min read",
+    image: "react-typescript"
   },
   {
     id: 7,
@@ -70,7 +77,8 @@ export const blogPosts: BlogPost[] = [
     content: "Responsive design is crucial in today's multi-device world. We'll cover mobile-first design, breakpoints, flexible layouts, and testing strategies.",
     date: "2024-02-25",
     category: "CSS",
-    readTime: "6 min read"
+    readTime: "6 min read",
+    image: "css-grid"
   },
   {
     id: 8,
@@ -79,7 +87,8 @@ export const blogPosts: BlogPost[] = [
     content: "TypeScript's type system is incredibly powerful. Learn about generics, union types, intersection types, and advanced patterns for type-safe code.",
     date: "2024-03-01",
     category: "TypeScript",
-    readTime: "11 min read"
+    readTime: "11 min read",
+    image: "react-typescript"
   },
   {
     id: 9,
@@ -88,7 +97,8 @@ export const blogPosts: BlogPost[] = [
     content: "From Context API to Redux, Zustand, and Jotai, there are many ways to manage state in React. We'll compare approaches and help you choose the right solution.",
     date: "2024-03-05",
     category: "React",
-    readTime: "8 min read"
+    readTime: "8 min read",
+    image: "javascript-es6"
   },
   {
     id: 10,
@@ -97,7 +107,8 @@ export const blogPosts: BlogPost[] = [
     content: "Next.js is a powerful React framework for production. Learn about server-side rendering, static generation, API routes, and deployment strategies.",
     date: "2024-03-10",
     category: "Next.js",
-    readTime: "10 min read"
+    readTime: "10 min read",
+    image: "nodejs-api"
   },
   {
     id: 11,
@@ -106,7 +117,8 @@ export const blogPosts: BlogPost[] = [
     content: "Vue 3's Composition API offers a more flexible way to organize component logic. We'll explore reactive refs, computed properties, and lifecycle hooks.",
     date: "2024-03-15",
     category: "Vue.js",
-    readTime: "7 min read"
+    readTime: "7 min read",
+    image: "javascript-es6"
   },
   {
     id: 12,
@@ -115,7 +127,8 @@ export const blogPosts: BlogPost[] = [
     content: "Testing is crucial for reliable applications. Learn about Jest, React Testing Library, and strategies for testing components, hooks, and user interactions.",
     date: "2024-03-20",
     category: "React",
-    readTime: "9 min read"
+    readTime: "9 min read",
+    image: "react-typescript"
   },
   {
     id: 13,
@@ -124,7 +137,8 @@ export const blogPosts: BlogPost[] = [
     content: "GraphQL offers flexibility but comes with complexity. We'll compare GraphQL and REST, exploring use cases, trade-offs, and implementation strategies.",
     date: "2024-03-25",
     category: "APIs",
-    readTime: "8 min read"
+    readTime: "8 min read",
+    image: "nodejs-api"
   },
   {
     id: 14,
@@ -133,7 +147,8 @@ export const blogPosts: BlogPost[] = [
     content: "Performance matters. Learn about code splitting, lazy loading, caching strategies, and tools to measure and improve your application's performance.",
     date: "2024-04-01",
     category: "Performance",
-    readTime: "12 min read"
+    readTime: "12 min read",
+    image: "css-grid"
   },
   {
     id: 15,
@@ -142,6 +157,7 @@ export const blogPosts: BlogPost[] = [
     content: "DevOps practices improve development speed and reliability. Explore CI/CD pipelines, containerization with Docker, and cloud deployment strategies.",
     date: "2024-04-05",
     category: "DevOps",
-    readTime: "10 min read"
+    readTime: "10 min read",
+    image: "python-web"
   }
 ];
